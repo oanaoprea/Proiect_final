@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proiect_final.EntryPage"
+             BackgroundImage="index.jpg"
+             BackgroundColor="Transparent">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Adauga Transport" Clicked="OnTransportAddedClicked" />
+        <ToolbarItem Text="Adauga Cazare" Clicked="OnCazareAddedClicked" />
+        <ToolbarItem Text="Adauga Destinatii" Clicked="OnDestinatiiAddedClicked" />
+
+
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <Button Text="Transporturi oferite" Clicked="OnTransporturiClicked" BackgroundColor="DeepSkyBlue"/>
+        <Button Text="Cazari oferite" Clicked="OnCazariClicked" BackgroundColor="LightSkyBlue"/>
+        <Button Text="Destinatii oferite" Clicked="OnDestinatiiClicked" BackgroundColor="Orange"/>
+        <Button Text="Rezervarile tale" Clicked="OnContracteClicked" BackgroundColor="Coral"/>
+        <Button Text="Fa o Rezervare!" Clicked="OnContractAddedClicked" BackgroundColor="IndianRed"/>
+
+
+
+    </StackLayout>
+</ContentPage>

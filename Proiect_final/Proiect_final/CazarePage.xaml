@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proiect_final.CazarePage"
+             Title="Adauga Cazare"
+             BackgroundImage="index.jpg"
+             BackgroundColor="Transparent">
+
+    <ContentPage.Content xmlns:local="clr-namespace:Proiect_final">
+
+        <StackLayout Margin="20">
+            <Editor Placeholder="Adauga un tip de cazare" Text="{Binding Tip_cazare}" HeightRequest="100" >
+                <Editor.Behaviors>
+                    <local:ValidationBehavior />
+                </Editor.Behaviors>
+            </Editor>
+            <Editor Placeholder="Adauga un nume de cazare" Text="{Binding Nume_cazare}" HeightRequest="100" >
+                <Editor.Behaviors>
+                    <local:ValidationBehavior />
+                </Editor.Behaviors>
+            </Editor>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="Save" Clicked="OnSaveButtonClicked" BackgroundColor="DeepSkyBlue" />
+                <Button Grid.Column="1" Text="Delete" Clicked="OnDeleteButtonClicked" BackgroundColor="Coral"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
